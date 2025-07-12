@@ -20,6 +20,7 @@ urlpatterns = [
     # Skill endpoints
     path('skills/', views.add_skill, name='add_skill'),
     path('skills/<str:skill_id>/', views.update_skill, name='update_skill'),
+    path('skills/<str:skill_id>/delete/', views.delete_skill, name='delete_skill'),
     path('skills/<str:skill_id>/upload-proof/', views.upload_skill_proof_file, name='upload_skill_proof_file'),
     path('skills/<str:skill_id>/mark-verified/', views.mark_skill_verified, name='mark_skill_verified'),
     

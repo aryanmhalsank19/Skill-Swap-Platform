@@ -96,7 +96,7 @@ def reset_password(request):
 
 # User Views
 @api_view(['GET'])
-@jwt_required
+@permission_classes([AllowAny])
 @handle_exceptions
 @paginate_response
 def get_public_user_list(request):
@@ -511,7 +511,7 @@ def get_my_skill_proofs(request):
 
 # System Messages Views
 @api_view(['GET'])
-@jwt_required
+@permission_classes([AllowAny])
 @handle_exceptions
 def get_active_system_messages(request):
     """Get active system messages"""
